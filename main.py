@@ -14,7 +14,7 @@ import helpers  # Import custom helper functions that avoid using built-in funct
 
 try:
     from nltk_plagiarism import get_similarity_score  # For advance stuff
-except (ImportError, ModuleNotFoundError):
+except:
     get_similarity_score = None  # Set get_similarity_score to None so we can check if the entirety of nltk is available later
 try:
     import matplotlib.pyplot as plt  # Import matplotlib for data visualization
@@ -24,7 +24,7 @@ try:
     from matplotlib.backends.backend_tkagg import (
         FigureCanvasTkAgg,  # For embedding matplotlib in tkinter
     )
-except (ImportError, ModuleNotFoundError):
+except:
     plt = None  # Set plt to None so we can check if matplotlib is available later
 import argparse  # For command-line argument parsing
 

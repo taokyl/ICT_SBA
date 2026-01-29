@@ -2227,6 +2227,8 @@ def configure_test_input(prompt: str, type, was: str, error: str = ""):
 
     Raises:
         ValueError: If the input does not meet the expected format or constraints.
+        But that is internally and catched, so its actually
+        None
 
     Returns:
         type: The validated input converted to the specified type.
@@ -2310,22 +2312,22 @@ def configure():
             [*f"Change settings{'(unsaved)' if unsaved else ''}:"],
             [],
             [*"CLI settings:"],
-            ["\x1b[1;4;97mA\x1b[m", *f"nalyse file: show first {config.single_file_display_line if unsaved_single_file_display_line is None else f'{unsaved_single_file_display_line} (was {config.single_file_display_line})'} sorted words appeared"],
-            ["\x1b[1;4;97mC\x1b[m", *f"ompare files: show first {config.compare_file_display_line if unsaved_compare_file_display_line is None else f'{unsaved_compare_file_display_line} (was {config.compare_file_display_line})'} sorted words appeared"],
+            [*"[", "\x1b[1;4;97mA\x1b[m", *f"]nalyse file: show first {config.single_file_display_line if unsaved_single_file_display_line is None else f'{unsaved_single_file_display_line} (was {config.single_file_display_line})'} sorted words appeared"],
+            [*"[", "\x1b[1;4;97mC\x1b[m", *f"]ompare files: show first {config.compare_file_display_line if unsaved_compare_file_display_line is None else f'{unsaved_compare_file_display_line} (was {config.compare_file_display_line})'} sorted words appeared"],
             [],
             [*"GUI settings:"],
-            ["a", "\x1b[1;4;97mN\x1b[m", *f"alyse file: show first {config.analyze_max_words if unsaved_analyze_max_words is None else f'{unsaved_analyze_max_words} (was {config.analyze_max_words})'} sorted words appeared"],
-            [*"Graph: ", "\x1b[1;4;97mM\x1b[m", *f"ax word: show first {config.graph_max_words if unsaved_graph_max_words is None else f'{unsaved_graph_max_words} (was {config.graph_max_words})'} sorted words appeared"],
-            [*"Graph figure size: set the figure ", "\x1b[1;4;97mH\x1b[m", *f"eight to {config.graph_figsize[1] if unsaved_graph_figsize_h is None else f'{unsaved_graph_figsize_h} (was {config.graph_figsize[1]})'}"],
-            [*"Graph figure size: set the figure ", "\x1b[1;4;97mW\x1b[m", *f"idth to {config.graph_figsize[0] if unsaved_graph_figsize_w is None else f'{unsaved_graph_figsize_w} (was {config.graph_figsize[0]})'}"],
-            [*"Graph bar: set color of s", "\x1b[1;4;97mI\x1b[m", *f"ngle bar (analyse file) to {config.graph_bar_color_single if unsaved_graph_bar_color_single is None else f'{unsaved_graph_bar_color_single} (was {config.graph_bar_color_single})'}"],
-            [*"Graph bar: set color of File", "\x1b[1;4;97m1\x1b[m", *f"'s bar (compare file) to {config.graph_bar_color_compare1 if unsaved_graph_bar_color_compare1 is None else f'{unsaved_graph_bar_color_compare1} (was {config.graph_bar_color_compare1})'}"],
-            [*"Graph bar: set color of File", "\x1b[1;4;97m2\x1b[m", *f"'s bar (compare file) to {config.graph_bar_color_compare2 if unsaved_graph_bar_color_compare2 is None else f'{unsaved_graph_bar_color_compare2} (was {config.graph_bar_color_compare2})'}"],
-            [*"Graph ", "\x1b[1;4;97mT\x1b[m", *f"itle: set font size to {config.graph_title_fontsize if unsaved_graph_title_fontsize is None else f'{unsaved_graph_title_fontsize} (was {config.graph_title_fontsize})'}"],
-            [*"Graph ", "\x1b[1;4;97mL\x1b[m", *f"abel: set font size to {config.graph_label_fontsize if unsaved_graph_label_fontsize is None else f'{unsaved_graph_label_fontsize} (was {config.graph_label_fontsize})'}"],
-            [*"Text: set ", "\x1b[1;4;97mF\x1b[m", *f"ont size to {config.text_font_size if unsaved_text_font_size is None else f'{unsaved_text_font_size} (was {config.text_font_size})'}"],
-            ["\x1b[1;4mS\x1b[m", *"ave and exit"],
-            ["\x1b[1;4;97mE\x1b[m", *"xit without saving"]], _override=True, wrap_override=True)  # Formatting the options menu
+            [*"a[", "\x1b[1;4;97mN\x1b[m", *f"]alyse file: show first {config.analyze_max_words if unsaved_analyze_max_words is None else f'{unsaved_analyze_max_words} (was {config.analyze_max_words})'} sorted words appeared"],
+            [*"Graph: [", "\x1b[1;4;97mM\x1b[m", *f"]ax word: show first {config.graph_max_words if unsaved_graph_max_words is None else f'{unsaved_graph_max_words} (was {config.graph_max_words})'} sorted words appeared"],
+            [*"Graph figure size: set the figure [", "\x1b[1;4;97mH\x1b[m", *f"]eight to {config.graph_figsize[1] if unsaved_graph_figsize_h is None else f'{unsaved_graph_figsize_h} (was {config.graph_figsize[1]})'}"],
+            [*"Graph figure size: set the figure [", "\x1b[1;4;97mW\x1b[m", *f"]idth to {config.graph_figsize[0] if unsaved_graph_figsize_w is None else f'{unsaved_graph_figsize_w} (was {config.graph_figsize[0]})'}"],
+            [*"Graph bar: set color of s[", "\x1b[1;4;97mI\x1b[m", *f"]ngle bar (analyse file) to {config.graph_bar_color_single if unsaved_graph_bar_color_single is None else f'{unsaved_graph_bar_color_single} (was {config.graph_bar_color_single})'}"],
+            [*"Graph bar: set color of File[", "\x1b[1;4;97m1\x1b[m", *f"]'s bar (compare file) to {config.graph_bar_color_compare1 if unsaved_graph_bar_color_compare1 is None else f'{unsaved_graph_bar_color_compare1} (was {config.graph_bar_color_compare1})'}"],
+            [*"Graph bar: set color of File[", "\x1b[1;4;97m2\x1b[m", *f"]'s bar (compare file) to {config.graph_bar_color_compare2 if unsaved_graph_bar_color_compare2 is None else f'{unsaved_graph_bar_color_compare2} (was {config.graph_bar_color_compare2})'}"],
+            [*"Graph [", "\x1b[1;4;97mT\x1b[m", *f"]itle: set font size to {config.graph_title_fontsize if unsaved_graph_title_fontsize is None else f'{unsaved_graph_title_fontsize} (was {config.graph_title_fontsize})'}"],
+            [*"Graph [", "\x1b[1;4;97mL\x1b[m", *f"]abel: set font size to {config.graph_label_fontsize if unsaved_graph_label_fontsize is None else f'{unsaved_graph_label_fontsize} (was {config.graph_label_fontsize})'}"],
+            [*"Text: set [", "\x1b[1;4;97mF\x1b[m", *f"]ont size to {config.text_font_size if unsaved_text_font_size is None else f'{unsaved_text_font_size} (was {config.text_font_size})'}"],
+            [*"[", "\x1b[1;4mS\x1b[m", *"]ave and exit"],
+            [*"e[", "\x1b[1;4;97mX\x1b[m", *"]it without saving"]], _override=True, wrap_override=True)  # Formatting the options menu
         
         # Prompt for configuration option from user
         config_option = input("Enter option: ", single_letter=True).upper().strip()
@@ -2355,7 +2357,7 @@ def configure():
             unsaved_graph_label_fontsize = configure_test_input("Enter font size of the figure's labels", float, str(config.graph_label_fontsize))
         elif config_option == "F":
             unsaved_text_font_size = configure_test_input("Enter font size of the text labels", int, str(config.text_font_size))
-        elif config_option in "ES":  # If user selects Exit or Save, break the loop
+        elif config_option in "XS":  # If user selects Exit or Save, break the loop
             break
         else:
             print(f"Invalid option {repr(config_option)}. Please try again.")  # Inform user of invalid input

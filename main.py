@@ -2571,7 +2571,7 @@ Top {show_nums} Most Frequent Words:
     print(txt)  # Display formatted word frequency information
 
     # Print alphabetically-sorted words
-    txt = f"\nFirst {show_nums} Words (Alphabetically):\n{"-" * hyphen_wrap}\n"  # Setup string for display
+    txt = f"\nFirst {show_nums} Words (Alphabetically):\n{'-' * hyphen_wrap}\n"  # Setup string for display
     alpha_sorted = sort_alphabetically(word_count)  # Get list of words sorted alphabetically
     for i, (word, count) in enumerate(alpha_sorted[:show_nums]):  # Iterate and format
         txt += f'{i + 1}. "{word}": {count} times\n'  # Append formatted string

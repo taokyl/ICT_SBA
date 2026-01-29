@@ -15,13 +15,14 @@ else:
     data_dir = __file__.rsplit("/", 1)[0] + "/nltk_data"
 nltk.data.path.append(data_dir)
 
-#downloads required NLTK data if not already present
-if not exists(data_dir + "/tokenizers"):
-    nltk.download("punkt", data_dir)
-    nltk.download("punkt_tab", data_dir)
-if not exists(data_dir + "/corpora"):
-    nltk.download("stopwords", data_dir)
-    nltk.download("wordnet", data_dir)
+def update():
+    #downloads required NLTK data if not already present
+    if not exists(data_dir + "/tokenizers"):
+        nltk.download("punkt", data_dir)
+        nltk.download("punkt_tab", data_dir)
+    if not exists(data_dir + "/corpora"):
+        nltk.download("stopwords", data_dir)
+        nltk.download("wordnet", data_dir)
 
 def preprocess_text(text: str) -> str:
     """
@@ -140,6 +141,8 @@ def get_similarity_score(query_text, reference_texts):
 
 
 if __name__ == "__main__":
+    #update()
+
     # Read example document from file
     with open("test2_1.txt", "r") as file:
         example_document = file.read()

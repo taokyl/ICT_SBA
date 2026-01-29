@@ -552,7 +552,7 @@ def split_exclude_ANSI(text: str, sep: str | list[str] | tuple[str] = ""):
         ['\x1b[31mHello\x1b[0m', 'World']
     """
     # Check the type of `sep` to ensure it is valid
-    if not (isinstance(sep, str) or all(isinstance(s, str) for s in sep)):
+    if not isinstance(sep, str) or not all(isinstance(s, str) for s in sep):
         raise TypeError(
             "sep should be either string or an iterable that contains only strings"
         )

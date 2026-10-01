@@ -15,20 +15,20 @@ Word Analysis and Plagiarism Detection System
 <img alt="" src="https://img.shields.io/badge/3.9-DFFF33" />
 <img alt="" src="https://img.shields.io/badge/3.10_%7C_3.11_%7C_3.12_%7C_3.13_%7C_3.14-7BFF2D" />
 <br>
-<img alt="" src="https://img.shields.io/github/commit-activity/y/TaokyleYT/WAPDS" />
-<img alt="" src="https://img.shields.io/github/last-commit/TaokyleYT/WAPDS" />
-<img alt="" src="https://img.shields.io/github/contributors-anon/TaokyleYT/WAPDS" />
-<img alt="" src="https://img.shields.io/github/issues/TaokyleYT/WAPDS">
-<img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/TaokyleYT/WAPDS">
-<img alt="GitHub repo file or directory count" src="https://img.shields.io/github/directory-file-count/TaokyleYT/WAPDS">
-<img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/TaokyleYT/WAPDS">
+<img alt="" src="https://img.shields.io/github/commit-activity/y/taokyl/WAPDS" />
+<img alt="" src="https://img.shields.io/github/last-commit/taokyl/WAPDS" />
+<img alt="" src="https://img.shields.io/github/contributors-anon/taokyl/WAPDS" />
+<img alt="" src="https://img.shields.io/github/issues/taokyl/WAPDS">
+<img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/taokyl/WAPDS">
+<img alt="GitHub repo file or directory count" src="https://img.shields.io/github/directory-file-count/taokyl/WAPDS">
+<img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/taokyl/WAPDS">
 <p>WAPDS is a system that analyzes texts and detects plagiarism across different texts. </p>
 
 </div>
 
 ## How to use
 
-1. First use git to clone this project `git clone https://github.com/TaokyleYT/WAPDS`
+1. First use git to clone this project `git clone https://github.com/taokyl/WAPDS`
 2. Switch directory `cd ./WAPDS/`
 3. Run the main script `python main.py`
 
@@ -295,7 +295,7 @@ should I train a big ahh neural network for plagiarism? idk it seemed a bit over
 So far so good
 ```
 
-## WOOO SOME FIXED BUGS MS LUO AINT FINDIN FOR NOTHIN
+## WOOO SOME FIXED BUGS MY CLASSMATE AINT FINDIN FOR NOTHIN
 
 ```none
 CLI:
